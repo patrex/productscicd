@@ -8,22 +8,22 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     defaults:
-      run: 
-        working-directory: products
+      run:
+        working-directory: memory-crud
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: 'npm'
-          cache-dependency-path: products/package-lock.json
-        
-      - name: Install deps
-        run: install ci
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run tests
         run: npm test
