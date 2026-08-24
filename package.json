@@ -1,0 +1,22 @@
+{
+  "name": "storewise",
+  "version": "1.0.0",
+  "description": "this is tiny store inventory service",
+  "keywords": [
+    "product",
+    "store",
+    "inventory"
+  ],
+  "license": "MIT",
+  "author": "us",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "supertest": "^7.2.2"
+  }
+}
