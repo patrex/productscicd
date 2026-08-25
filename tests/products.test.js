@@ -11,3 +11,10 @@ test('GET /products should return all products', async () => {
     assert.equal(response.status, 200);
     assert.ok(Array.isArray(response.body))
 });
+
+test("GET /products/:id returns a product", async () => {
+  const response = await request(app).get("/products/1");
+
+  assert.equal(response.status, 200);
+  assert.equal(response.body.id, 1);
+});
